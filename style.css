@@ -1,11 +1,15 @@
 html {
-    --text: #3a3a3a;
-    --background: #d4caca;
-    --primary: #000000;
-    --secondary: #464646;
+    --text: #000000;
+    --background: #dddcdc;
+    --primary: #646363;
+    --secondary: #202020;
     --accent: #fffb00;
 }
 
+body {
+    color: var(--text);
+    background: var(--background);
+}
 h1,
 h2,
 h3 {
@@ -27,6 +31,3 @@ img {
     background: var(--primary);
 }
 
-audio { 
-    background: var(--secondary);
-}
