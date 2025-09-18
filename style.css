@@ -6,9 +6,12 @@ html {
     --accent: #fffb00;
 }
 
+
+
 body {
     color: var(--text);
     background: var(--background);
+    font-family: "Quicksand";
 }
 h1,
 h2,
