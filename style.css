@@ -6,31 +6,52 @@ html {
     --accent: #fffb00;
 }
 
-
-
 body {
     color: var(--text);
     background: var(--background);
     font-family: "Quicksand";
+    font-weight: bold;
+    line-height: 150%;
+    font-stretch: 50%;
+    font-variant: no-common-ligatures;
+    text-decoration: underline;
+    text-decoration: underline overline;
 }
+
 h1,
 h2,
 h3 {
     color: var(--primary);
 }
 
-p { 
+p {
     background: var(--accent);
 }
 
 li::marker {
     color: var(--secondary);
-} 
+}
 
 img {
     padding: 2px;
     border: 2px solid var(--secondary);
     border-radius: 4px;
     background: var(--primary);
+}
+
+h1:hover {
+    filter: invert(100%)
+}
+
+h2:hover {
+    filter: invert(100%)
+}
+
+h3:hover {
+    filter: invert(100%)
+}
+
+p:hover {
+    filter: invert(100%)
 }
 
