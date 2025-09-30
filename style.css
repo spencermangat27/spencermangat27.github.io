@@ -55,6 +55,15 @@ p:hover {
     filter: invert(100%)
 }
 
+ul:hover {
+    filter: invert(100%)
+}
+
+ol:hover {
+    filter: invert(100%)
+}
+
+
 /*  
  * {
     border: 1px dashed black;
