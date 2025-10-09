@@ -14,8 +14,6 @@ body {
     line-height: 150%;
     font-stretch: 50%;
     font-variant: no-common-ligatures;
-    text-decoration: underline;
-    text-decoration: underline overline;
 }
 
 h1,
@@ -44,6 +42,12 @@ link:hover {
 }
 
 /*
+
+body { 
+    text-decoration: underline;
+    text-decoration: underline overline;
+}
+
 h1:hover {
     filter: invert(100%)
 }
