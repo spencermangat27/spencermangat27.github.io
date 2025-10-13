@@ -1,6 +1,6 @@
 html {
     --text: #000000;
-    --background: #dddcdc;
+    --background: #c7c7c7;
     --primary: #646363;
     --secondary: #202020;
     --accent: #fffb00;
@@ -20,6 +20,13 @@ h1,
 h2,
 h3 {
     color: var(--primary);
+}
+
+h1,
+h2 {
+    padding: 2px;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
 }
 
 p {
