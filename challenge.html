@@ -1,0 +1,57 @@
+<style>
+  .trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
+  body {
+    height: 300px;
+  }
+</style>
+
+<script>
+    
+  window.addEventListender('load', () => {
+    const trailCount = 20;
+    const trails = [];
+    for (let i = 0; i < trailCount; i++) {
+      const div = document.createElement('div');
+      div.className = 'trail';
+      document.body.appendChild(div);
+      trails.push({el: div, x: 0, y: 0});
+    }
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animate() {
+      let x = mouseX;
+      let y = mouseY;
+
+      trails.forEach((trail, index) => {
+        trail.x += (x - trail.x) * 0.3;
+        trail.y += (y - trail.y) * 0.3;
+
+        trail.el.style.transform = `translate(${trail.x}px, ${trail.y}px)`;
+
+        x = trail.x;
+        y = trail.y;
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+
+// I was typing in addEventListener and it suggested this whole chunk of code for me, so I just let it be.
+
+</script>
+
+ 
