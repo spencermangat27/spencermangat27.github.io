@@ -10,7 +10,7 @@
   function handleKeyDown(event) {
     if (event.key == "ArrowUp") {
       fontSize *= 1.1
-      if (fontSize > 100){
+      if (fontSize > 300){
         balloonEl.innerText = "💥";
         window.removeEventListener("keydown", handleKeyDown);
       }
@@ -19,6 +19,8 @@
     }
     if (event.key == "ArrowDown") {
       fontSize *= .9
+        window.removeEventListener("keydown", handleKeyDown);
+      }
       balloonEl.style.fontSize = fontSize + "px";
       event.preventDefault();
     }
