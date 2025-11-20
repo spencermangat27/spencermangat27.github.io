@@ -33,6 +33,7 @@
 </head>
 
 <body>
+    <a href="index.html">Back to Home!</a>
     <h1>Input Element Challenge</h1>
 
     <section id="part1">
@@ -83,10 +84,12 @@
         btnGreet.addEventListener("click", () => {
             let name = nameInput.value;
             let age = ageInput.value;
-            greetingOutput.innerText = "Hello," + name + "You are " + age + "year old!";
-        }
-            // Challenge: If age < 13, show "You're just a kid!" instead.
-        }
+            greetingOutput.innerText = "Hello, " + name + " you are " + age + " years old!";
+            if (age < 13) {
+                greetingOutput.innerText += " You're just a kid!";
+            } else if (age > 1000000000000) {
+                greetingOutput.innerText += " Unc, 🫵 😂!"   //A friend told me to add this 
+            }
         });
 
         // --- PART 2 ---
@@ -98,25 +101,31 @@
         colorInput.addEventListener("input", () => {
             colorOutput.style.backgroundColor = colorInput.value;
             colorOutput.innerText = "Hex: " + colorInput.value + ", Volume: " + volumeInput.value;
-            });
-        
+        });
+
 
         // Challenge: Also display the hex code and volume value dynamically.
 
         // --- PART 3 ---
+
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
+        const lightMode = document.getElementById("LightMode");
+        const darkMode = document.getElementById("darMode");
+        const systeMode = document.getElementById("systemMode");
         // TODO: Find which radio button is checked and display it.
-         // Challenge: Include whether the user subscribed or not.
-         btnSubmit.addEventListener("click", () => {
-             subscribeBox.checked ? "Subscribed" : "Not Subscribed";
-             if (subscribeBox.checked) {
-                 modeOutput.innerText = "You are subscribed.";
-             } else {
-                 modeOutput.innerText = "You are not subscribed.";
-             }
+
+        // Challenge: Include whether the user subscribed or not.
+        btnSubmit.addEventListener("click", () => {
+            subscribeBox.checked ? "Subscribed" : "Not Subscribed";
+            if (subscribeBox.checked) {
+                modeOutput.innerText = "You are subscribed!";
+            } else {
+                modeOutput.innerText = "You are not subscribed.";
+            }
         });
+
     </script>
 </body>
 
