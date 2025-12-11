@@ -10,36 +10,43 @@
 </head>
 
 <body>
+    <h1>Hornet Animation(You need to click multiple times before getting all frames)</h1>
+    <a href="index.html">Link to Home Page</a>
     <div id="hornetAnimation">
-        <img id="hornet" src="Hornet.one.png" height="400" width="500">
+        <img id="hornet" src="Hornet.1.png" height="400" width="500">
     </div>
 
-<script>
-    const hornetAnimation = document.getElementById("hornetAnimation");
-    const hornet = document.getElementById("hornet");
-    let imageFrame = 1
-    hornetAnimation.addEventListener("click", (event) => {
-        imageFrame = imageFrame + 1
-        console.log(imageFrame)
-        if (imageFrame == 5) {
-            imageFrame = 1;
-        }
-        if (imageFrame == 1) {
-            hornet.src = "Hornet.one.png";
-        }
-        if (imageFrame == 2) {
-            hornet.src = "Hornet.two.png";
-        }
-        if (imageFrame == 3) {
-            hornet.src = "Hornet.three.png";
-        }
-        if (imageFrame == 4) {
-            hornet.src = "Hornet.four.png";
-        }
-    })
+    <script>
+        const hornetAnimation = document.getElementById("hornetAnimation");
+        const hornet = document.getElementById("hornet");
+        let imageFrame = 1
+        hornetAnimation.addEventListener("click", (event) => {
+            imageFrame = imageFrame + 1
+            console.log(imageFrame)
+            if (imageFrame > 6) {
+                imageFrame = 1;
+            }
+            if (imageFrame == 1) {
+                hornet.src = "Hornet.1.png";
+            }
+            if (imageFrame == 2) {
+                hornet.src = "Hornet.2.png";
+            }
+            if (imageFrame == 3) {
+                hornet.src = "Hornet.3.png";
+            }
+            if (imageFrame == 4) {
+                hornet.src = "Hornet.4.png";
+            }
+            if (imageFrame == 5) {
+                hornet.src = "Hornet.3.png";
+            }
+            if (imageFrame == 6) {
+                hornet.src = "Hornet.2.png";
+            }
+        });
 
-</script>
+    </script>
 </body>
 
 </html>
-
