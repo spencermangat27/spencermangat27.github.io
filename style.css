@@ -3,6 +3,8 @@ html {
     --background: #c7c7c7;
     --primary: #646363;
     --secondary: #202020;
+    --tertiary: #00eeff; 
+    --quaternary: #1900ff;
     /* --accent: #fffb00; */
 }
 
@@ -44,10 +46,13 @@ img {
     background: var(--primary);
 }
 
-a:hover {
-    filter: invert(100%)
+a {
+    color: var(--quaternary);
 }
 
+a:hover {
+    color: var(--tertiary);
+}
 /*
 
 body { 
