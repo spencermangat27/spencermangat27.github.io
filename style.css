@@ -24,12 +24,12 @@ h3 {
     color: var(--primary);
 }
 
-h1,
+/* h1,
 h2 {
     padding: 2px;
     border: 2px solid var(--secondary);
     border-radius: 4px;
-}
+} */
 
 p {
     background: var(--accent);
